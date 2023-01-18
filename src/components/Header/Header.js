@@ -21,13 +21,7 @@ const Header = () => {
                </span>
                <ul className="flex items-center">
                   <li className='px-2'>
-                        <NavLink className="py-1 ml-3"
-                            to="/"
-                            ClassName={({ isActive }) =>
-                            isActive ? "bg-red-500" : undefined
-                            }>
-                                Home
-                        </NavLink>    
+                       <button className='bg-blue-600 shadow-lg text-white px-4 py-2 rounded-lg'>Sign In</button> 
                     </li>
                   {/* <li className='px-2'>
                        <NavLink className="py-1 ml-3"

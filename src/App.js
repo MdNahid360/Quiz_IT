@@ -11,7 +11,9 @@ function App() {
   const router = createBrowserRouter([
     {path : '/', element : <Main></Main>, children : [
       {path : '/', element : <Home></Home>},
-      {path : '/allQuiz', element : <AllQuize></AllQuize>},
+      {path : '/allQuiz', element : <AllQuize></AllQuize>, loader : async()=>{
+        return fetch('https://openapi.programming-hero.com/api/quiz/')
+      }},
       {path : '/blog', element : <Blog></Blog>},
     ]},
     {path : '*', element : <NotFound></NotFound>},

@@ -1,18 +1,9 @@
-import { ClipboardDocumentCheckIcon, DocumentTextIcon, HomeIcon } from '@heroicons/react/24/solid';
+import { ClipboardDocumentCheckIcon, DocumentTextIcon, HomeIcon, TrophyIcon } from '@heroicons/react/24/solid';
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import Header from '../Header/Header';
 
 const Main = () => {
-     
-//     let activeStyle = {
-//     backgroundColor : 'white',
-//      color: 'black',
-//      width : '100%!important',
-//      display : 'flex'
-//     // transition : 'all 0.2s ease-in-out',
-     
-//   };
     return (
         <div>
             <div className="flex">
@@ -33,12 +24,17 @@ const Main = () => {
                            <DocumentTextIcon className="w-6 mr-2"></DocumentTextIcon>  Blog
                      </NavLink>
                   </li>
+                  <li className='w-full bg-white-0 mt-3 '>
+                     <NavLink to='/certificate' className={({isActive})=> isActive ? 'bg-blue-500 flex py-2 px-2 rounded-lg ease-out duration-200' : 'flex py-2 px-2 rounded-lg ease-out duration-300 '}>
+                           <TrophyIcon className="w-6 mr-2"></TrophyIcon>  Certificate
+                     </NavLink>
+                  </li>
                </ul>
-               
+
                 </div>
                 <div className="main-body w-full h-[100vh] overflow-hidden">
                     <Header></Header>
-                    <div className="h-[100vh] overflow-y-scroll">
+                    <div className="h-[100vh] overflow-y-scroll md:p-3 p-2">
                           <Outlet></Outlet>
                     </div>
                 </div>
