@@ -3,11 +3,12 @@ import { useState } from 'react';
 import { createContext, provider,React} from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import Header from '../Header/Header';
-export const MenuContext = createContext(false);
+export let MenuContext = createContext(false);
 
 const Main = () => {
         const [open, setOpen] = useState(false);
-        console.log(open);
+      
+       
     return (
       <MenuContext.Provider value={[open, setOpen]}>
               <div>
