@@ -1,13 +1,18 @@
 import { ClipboardDocumentCheckIcon, DocumentTextIcon, HomeIcon, TrophyIcon } from '@heroicons/react/24/solid';
-import React from 'react';
+import { useState } from 'react';
+import { createContext, provider,React} from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import Header from '../Header/Header';
+export const MenuContext = createContext(false);
 
 const Main = () => {
+        const [open, setOpen] = useState(false);
+        console.log(open);
     return (
-        <div>
+      <MenuContext.Provider value={[open, setOpen]}>
+              <div>
             <div className="flex">
-                <div className="overflow-hidden w-[300px] py-3 px-2 bg-blue-800 text-white h-[100vh]">
+                <div className={`overflow-hidden duration-300 ${open ? ' w-[0px] py-0 px-0' : ' w-[300px] py-3 px-2'} bg-blue-800 text-white h-[100vh]`}>
                 <ul className="">
                   <li className='w-full bg-white-0 mt-2 '>
                     <NavLink to='/' className={({isActive})=> isActive ? 'bg-blue-500 flex py-2 px-2 rounded-lg ease-out duration-200' : 'flex py-2 px-2 rounded-lg ease-out duration-300 '}>
@@ -39,7 +44,8 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-        </div>
+         </div>
+      </MenuContext.Provider>
     );
 };
 
