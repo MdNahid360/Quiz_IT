@@ -4,9 +4,10 @@ import Quiz from '../Quiz/Quiz';
 import bg1 from '../../img/bg2.jpg'
 import { CodeBracketIcon } from '@heroicons/react/24/solid';
 import 'boxicons';
+import { useState } from 'react';
 const AllQuize = () => {
     const data = useLoaderData();
-    
+    const [threeCols, setThreeCols] = useState(false);
     return (
       <div className="">
             <div className="h-[300px] rounded-xl p-4" style={{ 
@@ -23,11 +24,14 @@ const AllQuize = () => {
             <h1 className='text-xl font-[700] text-black'>Quiz</h1>
                 <div className="button-group md:flex hidden">
                     <button>
+                         <box-icon name='grid-small' size="md" className='text-black' ></box-icon>
+                    </button>
+                    <button onClick={()=> setThreeCols(!threeCols)}>
                          <box-icon name='grid' type='solid' className="text-black" ></box-icon>
                     </button>
                 </div>
             </div>
-            <div className='md:grid grid-cols-4 mt-2'>
+            <div className='md:grid grid-cols-3 mt-2'>
                 {
                     data.data.map(quiz => <Quiz key={quiz.id} quiz={quiz}></Quiz>)
                 }

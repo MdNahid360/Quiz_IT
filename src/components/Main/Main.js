@@ -7,7 +7,7 @@ export let MenuContext = createContext(false);
 
 const Main = () => {
         const [open, setOpen] = useState(false);
-      
+       
        
     return (
       <MenuContext.Provider value={[open, setOpen]}>
