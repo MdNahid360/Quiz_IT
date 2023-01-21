@@ -1,7 +1,7 @@
-import { ArrowLeftIcon, ArrowRightIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { XMarkIcon } from '@heroicons/react/24/outline';
 import { ClipboardDocumentCheckIcon, DocumentTextIcon, HomeIcon, TrophyIcon } from '@heroicons/react/24/solid';
 import { useState } from 'react';
-import { createContext, provider,React} from 'react';
+import { createContext, React} from 'react';
 import { Link, NavLink, Outlet } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';

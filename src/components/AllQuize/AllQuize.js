@@ -2,9 +2,9 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Quiz from '../Quiz/Quiz';
 import bg1 from '../../img/bg2.jpg'
-import { CodeBracketIcon } from '@heroicons/react/24/solid';
+// import { CodeBracketIcon } from '@heroicons/react/24/solid';
 import { useState } from 'react';
-import { ListBulletIcon, Square3Stack3DIcon, Squares2X2Icon } from '@heroicons/react/24/outline';
+import { ListBulletIcon, Squares2X2Icon } from '@heroicons/react/24/outline';
 // import 'boxicons';
 
 const AllQuize = () => {
@@ -12,7 +12,7 @@ const AllQuize = () => {
     const [threeCols, setThreeCols] = useState(false);
     return (
       <div className="">
-            <div className="md:h-[300px] h-[180px] rounded-xl p-4" style={{ 
+            <div className="md:h-[300px] h-[18Square3Stack3DIcon0px] rounded-xl p-4" style={{ 
                          background: `linear-gradient(90deg, rgba(19,14,113,0.5355392156862745) 0%, rgba(7,7,68,0.6559873949579832) 48%, rgba(0,78,255,0.7960434173669468) 100%),url(${bg1})`,
                          backgroundSize : 'cover' 
                         }}>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+// import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import banner from '../../img/banner2.jpg'; 
 import About from '../About/About';
@@ -62,7 +62,7 @@ const Home = () => {
         css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
         document.body.appendChild(css);
     };
-    const [sendQus, setSendQus] = useState()
+    // const [sendQus, setSendQus] = useState()
 
     return (
        <>

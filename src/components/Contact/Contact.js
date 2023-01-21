@@ -1,7 +1,7 @@
 import React from 'react';
 import bg from '../../img/bg3.jpg';
 import 'boxicons';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const Contact = () => {

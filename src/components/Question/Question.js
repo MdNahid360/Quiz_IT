@@ -3,7 +3,6 @@ import { EyeSlashIcon } from '@heroicons/react/24/outline';
 import React from 'react';
 import { useState } from 'react';
 import Swal from 'sweetalert2';
-import { MenuContext } from '../Main/Main';
 
 const Question = ({qus, index,nmb}) => {
     const { question, correctAnswer, options} = qus;

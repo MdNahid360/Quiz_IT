@@ -1,10 +1,10 @@
-import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
+import {  ArrowRightIcon } from '@heroicons/react/24/outline';
 import React from 'react';
-import { useContext } from 'react';
+// import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 const BlogCart = ({blg}) => {
-    let {title, id, dic, pic} = blg;
+    let {title, id, pic} = blg;
     return (
        <div className="bg-white px-3 pt-3 pb-5 rounded-lg">
            <div className="">
