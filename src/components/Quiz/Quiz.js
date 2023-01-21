@@ -6,7 +6,7 @@ const Quiz = ({quiz}) => {
     const navigate = useNavigate();
     
     return (
-        <div onClick={()=>navigate(`/quiz/${id}`)} className='bg-white m-2 px-3 py-4 rounded-lg cursor-pointer duration-300 hover:shadow-md hover:duration-300 flex items-start'>
+        <div onClick={()=>navigate(`/quiz/${id}`)} className='bg-white m-2 px-3 py-4 rounded-lg cursor-pointer duration-300 hover:shadow-md hover:duration-300 md:flex items-start'>
             <div className="bg-gray-800 p-3 w-[50px] h-[50px] flex items-center justify-center rounded-xl shadow-lg shadow-orange-300/500">
                 <img src={logo} className='w-10 rounded-lg' alt="" />
             </div>

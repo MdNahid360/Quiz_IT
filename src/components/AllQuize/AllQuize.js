@@ -3,8 +3,10 @@ import { useLoaderData } from 'react-router-dom';
 import Quiz from '../Quiz/Quiz';
 import bg1 from '../../img/bg2.jpg'
 import { CodeBracketIcon } from '@heroicons/react/24/solid';
-import 'boxicons';
 import { useState } from 'react';
+import { ListBulletIcon, Square3Stack3DIcon, Squares2X2Icon } from '@heroicons/react/24/outline';
+// import 'boxicons';
+
 const AllQuize = () => {
     const data = useLoaderData();
     const [threeCols, setThreeCols] = useState(false);
@@ -22,16 +24,18 @@ const AllQuize = () => {
             </div>
             <div className="flex pb-3 justify-between items-center mt-4 px-2 border-b border-[#56555580]">
             <h1 className='text-xl font-[700] text-black'>Quiz</h1>
-                <div className="button-group md:flex hidden">
-                    <button>
-                         <box-icon name='grid-small' size="md" className='text-black' ></box-icon>
+                <div className="button-group flex">
+                    
+                    <button className='bg-[white] outline-none p-1 rounded-lg mr-2' onClick={()=> setThreeCols(!threeCols)}>
+                            <ListBulletIcon className="w-6"></ListBulletIcon>
                     </button>
-                    <button onClick={()=> setThreeCols(!threeCols)}>
-                         <box-icon name='grid' type='solid' className="text-black" ></box-icon>
+                    
+                    <button className='bg-[white] outline-none p-1 rounded-lg' onClick={()=> setThreeCols(!threeCols)}>
+                            <Squares2X2Icon className="w-6"></Squares2X2Icon>
                     </button>
                 </div>
             </div>
-            <div className='md:grid grid-cols-3 mt-2'>
+            <div className={`${threeCols ? 'block' : 'grid'} md:grid-cols-3 grid-cols-2 mt-2`}>
                 {
                     data.data.map(quiz => <Quiz key={quiz.id} quiz={quiz}></Quiz>)
                 }
