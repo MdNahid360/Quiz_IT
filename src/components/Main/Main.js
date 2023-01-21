@@ -21,7 +21,7 @@ const Main = () => {
               <div className="md:hidden flex items-center justify-between m-2">
                   <Link to='/' className="font-bold ml-2">Quiz IT</Link> <XMarkIcon className='w-4' onClick={()=> setOpen(!open)}></XMarkIcon>
                </div>
-                  <li onClick={()=> setOpen(!open)} className='w-full bg-white-0 mt-2 overflow-hidden'>
+                  <li  className='w-full bg-white-0 mt-2 overflow-hidden'>
                     <NavLink to='/' className={({isActive})=> isActive ? 'bg-blue-500 flex py-2 px-2 rounded-lg ease-out duration-200' : 'flex py-2 px-2 rounded-lg ease-out duration-300 '}>
                            <HomeIcon className="w-6 mr-2"></HomeIcon>  Home
                      </NavLink>
