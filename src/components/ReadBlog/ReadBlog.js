@@ -1,8 +1,5 @@
 import { ArrowLeftIcon } from '@heroicons/react/24/outline';
-import React, { useContext } from 'react';
 import { useLoaderData, useNavigate, useParams } from 'react-router-dom';
-import { PassBlogContext } from '../Blog/Blog';
-
 const ReadBlog = () => {
     let bId = useParams().blogId;
     let readBlog = useLoaderData();

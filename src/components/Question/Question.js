@@ -1,15 +1,13 @@
-import { CheckCircleIcon, DocumentCheckIcon, EyeIcon } from '@heroicons/react/24/outline';
+import { CheckCircleIcon,  EyeIcon } from '@heroicons/react/24/outline';
 import { EyeSlashIcon } from '@heroicons/react/24/outline';
 import React from 'react';
-import { useContext } from 'react';
 import { useState } from 'react';
 import Swal from 'sweetalert2';
 import { MenuContext } from '../Main/Main';
 
 const Question = ({qus, index,nmb}) => {
-    const {id, question, correctAnswer, options} = qus;
+    const { question, correctAnswer, options} = qus;
     const [show, setShow] = useState(false);
-    let dt = useContext(MenuContext)
     const [ansActive, setAnsActive] = useState(false);
        const handleAns = (e, ans,i) => {
         if (e === ans) {
