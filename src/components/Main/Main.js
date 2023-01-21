@@ -3,19 +3,18 @@ import { ClipboardDocumentCheckIcon, DocumentTextIcon, HomeIcon, TrophyIcon } fr
 import { useState } from 'react';
 import { createContext, provider,React} from 'react';
 import { Link, NavLink, Outlet } from 'react-router-dom';
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 export let MenuContext = createContext(false);
 
 const Main = () => {
-        const [open, setOpen] = useState(false);
-        const [openSm, setOpenSm] = useState(false);
-       
+        const [open, setOpen] = useState(false);     
        
     return (
       <MenuContext.Provider value={[open, setOpen]}>
               <div>
             <div className="flex">
-                <div className={`overflow-hidden duration-300 md:block  ${open ? ' md:w-[0px] w-[100%] py-0 px-0 fixed' : ' md:w-[350px] w-0'} bg-blue-800 text-white h-[100vh]`}>
+                <div className={`overflow-hidden duration-300 md:block  ${open ? ' md:w-[0px] w-[900px] py-0 px-0 md:block ' : ' md:w-[350px] w-0 '} bg-blue-800 text-white h-[100vh]`}>
              
                 <ul className=" w-[95%] m-auto overflow-hidden">
               <div className="md:hidden flex items-center justify-between m-2">
@@ -44,14 +43,18 @@ const Main = () => {
                </ul>
 
                 </div>
-                <div className={`main-body w-full h-[100vh] overflow-hidden ${open ? 'md:w-full w-0' : ' w-full'}`}>
-                    <Header></Header>
-                    <div className="h-[100vh] overflow-y-scroll md:p-3 p-2">
+                <div className={`main-body w-full h-[100vh] overflow-hidden ${open ? 'md:w-full w-[0px]' : ' w-full'} pb-16`}>
+                    <Header></Header>  
+                    <div className="h-full overflow-y-scroll md:p-3 p-2">
                           <Outlet></Outlet>
+                          
                     </div>
+                   
                 </div>
             </div>
+              
          </div>
+         <Footer></Footer>
       </MenuContext.Provider>
     );
 };

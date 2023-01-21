@@ -1,7 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import banner from '../../img/banner2.jpg'; 
-import vct1 from '../../img/vct1.svg'; 
+import About from '../About/About';
+import Contact from '../Contact/Contact';
 
 const Home = () => {
     let TxtType = function(el, toRotate, period) {
@@ -69,11 +71,11 @@ const Home = () => {
                 <span class="wrap"></span>
             </h1>
             <div className="flex justify-start p-3 ">
-                        <button className="bg-[#ec3283] text-center  text-white px-8 py-2 rounded-md m-auto capitalize"> ask a question</button>
+                        <Link to="/allQuiz" className="bg-[#ec3283] text-center  text-white px-8 py-2 rounded-md m-auto capitalize"> Get Started</Link>
             </div>
         </div>
-           
-        
+           <About></About>
+           <Contact></Contact>
        </>
     );
 };
