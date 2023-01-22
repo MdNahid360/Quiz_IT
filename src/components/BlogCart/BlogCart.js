@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const BlogCart = ({blg}) => {
     let {title, id, pic} = blg;
     return (
-       <div className="bg-white px-3 pt-3 pb-5 rounded-lg">
+       <div className="bg-white px-3 pt-3 pb-5 rounded-lg md:m-auto mt-5">
            <div className="">
                 <img src={pic} alt="" className="rounded-xl" />
                 <h1 className="font-bold text-xl mt-3">{title} ?</h1>

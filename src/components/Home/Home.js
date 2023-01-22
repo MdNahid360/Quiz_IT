@@ -67,9 +67,10 @@ const Home = () => {
     return (
        <>
            <div  className="md:h-[340px] relative h-[200px] py-3 px-2 rounded-lg" style={{backgroundImage : `linear-gradient(60deg,transparent, indigo),url("${banner}")`, backgroundSize : "cover",backgroundPosition : "center", backgroundRepeat : "no-repeat"}}>
-            <h1 class="typewrite text-white capitalize mt-[5%] font-bold text-center text-4xl" data-period="2000" data-type='[ "Welcome to, QUIZ IT.", "This Is a Quiz Application", "For A Web Developer", "Get Upgrade Your Skill" ]'>
+            <h1 class="typewrite md:block hidden text-white capitalize mt-[5%] font-bold text-center text-4xl" data-period="2000" data-type='[ "Welcome to, QUIZ IT.", "This Is a Quiz Application", "For A Web Developer", "Get Upgrade Your Skill" ]'>
                 <span class="wrap"></span>
             </h1>
+            <h1 className="md:hidden block text-white font-bold text-2xl mt-8 text-center">Get Upgrade your skill</h1>
             <div className="flex justify-start p-3 ">
                         <Link to="/allQuiz" className="bg-[#ec3283] text-center  text-white px-8 py-2 rounded-md m-auto capitalize"> Get Started</Link>
             </div>

@@ -1,6 +1,7 @@
+import { ArrowLeftIcon } from '@heroicons/react/24/solid';
 import React from 'react';
 import { useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import Question from '../Question/Question';
 
 const GetQuiz = () => {
@@ -10,10 +11,12 @@ const GetQuiz = () => {
     const nmb =()=>{
         setNm(nm+1)
     }
+    const navigate = useNavigate();
     return (
         <div className='pb-[8%]'>
             <div className="flex items-center justify-between border-b-2 border-gray-400 pb-2">
                 <div className="flex items-center ">
+                    <button className="md:hidden block"><ArrowLeftIcon className='w-6' onClick={()=>navigate(-1)}></ArrowLeftIcon></button>
                     <img src={logo} className="w-12" alt="" />
                 <h1 className="font-bold text-2xl ml-2 text-[#073840]">{name}</h1>
                 </div>

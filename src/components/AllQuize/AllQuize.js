@@ -1,15 +1,17 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import Quiz from '../Quiz/Quiz';
 import bg1 from '../../img/bg2.jpg'
 // import { CodeBracketIcon } from '@heroicons/react/24/solid';
 import { useState } from 'react';
 import { ListBulletIcon, Squares2X2Icon } from '@heroicons/react/24/outline';
+import { ArrowLeftIcon } from '@heroicons/react/24/solid';
 // import 'boxicons';
 
 const AllQuize = () => {
     const data = useLoaderData();
     const [threeCols, setThreeCols] = useState(false);
+    const navigate = useNavigate();
     return (
       <div className="">
             <div className="md:h-[300px] h-[18Square3Stack3DIcon0px] rounded-xl p-4" style={{ 
@@ -23,7 +25,7 @@ const AllQuize = () => {
                 </div>
             </div>
             <div className="flex pb-3 justify-between items-center mt-4 px-2 border-b border-[#56555580]">
-            <h1 className='text-xl font-[700] text-black'>Quiz</h1>
+            <h1 className='text-xl font-[700] text-black flex items-center'> <button className="md:hidden block mr-3"><ArrowLeftIcon className='w-6' onClick={()=>navigate(-1)}></ArrowLeftIcon></button> Quiz</h1>
                 <div className="button-group flex">
                     
                     <button className='bg-[white] outline-none p-1 rounded-lg mr-2' onClick={()=> setThreeCols(!threeCols)}>
